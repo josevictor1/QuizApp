@@ -17,6 +17,8 @@
 		1A0EB34F233657DC00D00D70 /* QuizAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0EB34E233657DC00D00D70 /* QuizAppUITests.swift */; };
 		1A58F5822336797F002F459C /* Netwroking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A58F5812336797F002F459C /* Netwroking.framework */; };
 		1A58F5832336797F002F459C /* Netwroking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A58F5812336797F002F459C /* Netwroking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1A58F5AA23367D0F002F459C /* Commons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A58F5A923367D0F002F459C /* Commons.framework */; };
+		1A58F5AB23367D0F002F459C /* Commons.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A58F5A923367D0F002F459C /* Commons.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				1A58F5832336797F002F459C /* Netwroking.framework in Embed Frameworks */,
+				1A58F5AB23367D0F002F459C /* Commons.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,6 +69,7 @@
 		1A0EB34E233657DC00D00D70 /* QuizAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAppUITests.swift; sourceTree = "<group>"; };
 		1A0EB350233657DC00D00D70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A58F5812336797F002F459C /* Netwroking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Netwroking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A58F5A923367D0F002F459C /* Commons.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Commons.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A58F5822336797F002F459C /* Netwroking.framework in Frameworks */,
+				1A58F5AA23367D0F002F459C /* Commons.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +187,7 @@
 		1A58F5802336797F002F459C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1A58F5A923367D0F002F459C /* Commons.framework */,
 				1A58F5812336797F002F459C /* Netwroking.framework */,
 			);
 			name = Frameworks;
