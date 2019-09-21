@@ -10,6 +10,8 @@
 		1A58F59923367D01002F459C /* Commons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A58F58F23367D01002F459C /* Commons.framework */; };
 		1A58F59E23367D01002F459C /* CommonsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A58F59D23367D01002F459C /* CommonsTests.swift */; };
 		1A58F5A023367D01002F459C /* Commons.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A58F59223367D01002F459C /* Commons.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AA6FB8C2336B0B100BC2B3A /* UIViewController+Instantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA6FB8B2336B0B100BC2B3A /* UIViewController+Instantiable.swift */; };
+		1AC9720E23368423005E89AA /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC9720D23368423005E89AA /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		1A58F59823367D01002F459C /* CommonsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommonsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A58F59D23367D01002F459C /* CommonsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonsTests.swift; sourceTree = "<group>"; };
 		1A58F59F23367D01002F459C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AA6FB8B2336B0B100BC2B3A /* UIViewController+Instantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Instantiable.swift"; sourceTree = "<group>"; };
+		1AC9720D23368423005E89AA /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 		1A58F59123367D01002F459C /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				1AA6FB8A2336B06F00BC2B3A /* Extensions */,
+				1AC9720C2336840D005E89AA /* Coordinator */,
 				1A58F59223367D01002F459C /* Commons.h */,
 				1A58F59323367D01002F459C /* Info.plist */,
 			);
@@ -84,6 +90,22 @@
 				1A58F59F23367D01002F459C /* Info.plist */,
 			);
 			path = CommonsTests;
+			sourceTree = "<group>";
+		};
+		1AA6FB8A2336B06F00BC2B3A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1AA6FB8B2336B0B100BC2B3A /* UIViewController+Instantiable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1AC9720C2336840D005E89AA /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				1AC9720D23368423005E89AA /* Coordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +170,7 @@
 				TargetAttributes = {
 					1A58F58E23367D01002F459C = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 					};
 					1A58F59723367D01002F459C = {
 						CreatedOnToolsVersion = 11.0;
@@ -195,6 +218,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AC9720E23368423005E89AA /* Coordinator.swift in Sources */,
+				1AA6FB8C2336B0B100BC2B3A /* UIViewController+Instantiable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +365,7 @@
 		1A58F5A423367D01002F459C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 77FV36N6JL;
@@ -356,6 +382,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jvpc.Commons;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +391,7 @@
 		1A58F5A523367D01002F459C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 77FV36N6JL;
@@ -388,6 +416,7 @@
 		1A58F5A723367D01002F459C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 77FV36N6JL;
 				INFOPLIST_FILE = CommonsTests/Info.plist;
@@ -406,6 +435,7 @@
 		1A58F5A823367D01002F459C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 77FV36N6JL;
 				INFOPLIST_FILE = CommonsTests/Info.plist;
