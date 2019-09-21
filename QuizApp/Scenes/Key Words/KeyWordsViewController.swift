@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  KeyWordsViewController.swift
 //  QuizApp
 //
 //  Created by José Victor Pereira Costa on 21/09/19.
@@ -8,13 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class KeyWordsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
 
-
 }
-
