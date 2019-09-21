@@ -2,7 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Netwroking/Netwroking.xcodeproj">
+      location = "group:Commons/Commons.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/josevictorpereiracosta/Documents/Tests/ArchTouch/QuizMobileApp/QuizApp/Netwroking/Networking.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:QuizApp.xcodeproj">
