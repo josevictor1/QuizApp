@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1A0EB32A233657DB00D00D70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0EB329233657DB00D00D70 /* AppDelegate.swift */; };
-		1A0EB32C233657DB00D00D70 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0EB32B233657DB00D00D70 /* SceneDelegate.swift */; };
 		1A0EB32E233657DB00D00D70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0EB32D233657DB00D00D70 /* ViewController.swift */; };
 		1A0EB331233657DB00D00D70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A0EB32F233657DB00D00D70 /* Main.storyboard */; };
 		1A0EB334233657DB00D00D70 /* QuizApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A0EB332233657DB00D00D70 /* QuizApp.xcdatamodeld */; };
@@ -38,7 +37,6 @@
 /* Begin PBXFileReference section */
 		1A0EB326233657DB00D00D70 /* QuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A0EB329233657DB00D00D70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1A0EB32B233657DB00D00D70 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1A0EB32D233657DB00D00D70 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1A0EB330233657DB00D00D70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A0EB333233657DB00D00D70 /* QuizApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuizApp.xcdatamodel; sourceTree = "<group>"; };
@@ -101,14 +99,10 @@
 		1A0EB328233657DB00D00D70 /* QuizApp */ = {
 			isa = PBXGroup;
 			children = (
-				1A0EB329233657DB00D00D70 /* AppDelegate.swift */,
-				1A0EB32B233657DB00D00D70 /* SceneDelegate.swift */,
-				1A0EB32D233657DB00D00D70 /* ViewController.swift */,
-				1A0EB32F233657DB00D00D70 /* Main.storyboard */,
-				1A0EB335233657DC00D00D70 /* Assets.xcassets */,
-				1A0EB337233657DC00D00D70 /* LaunchScreen.storyboard */,
-				1A0EB33A233657DC00D00D70 /* Info.plist */,
-				1A0EB332233657DB00D00D70 /* QuizApp.xcdatamodeld */,
+				1A1886C7233666FD004C2121 /* AppDelegate */,
+				1A1886C6233666D2004C2121 /* LaunchScreen */,
+				1A1886C5233666C1004C2121 /* Supporting Files */,
+				1A1886C423366684004C2121 /* Scenes */,
 			);
 			path = QuizApp;
 			sourceTree = "<group>";
@@ -129,6 +123,41 @@
 				1A0EB350233657DC00D00D70 /* Info.plist */,
 			);
 			path = QuizAppUITests;
+			sourceTree = "<group>";
+		};
+		1A1886C423366684004C2121 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				1A0EB32D233657DB00D00D70 /* ViewController.swift */,
+				1A0EB32F233657DB00D00D70 /* Main.storyboard */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		1A1886C5233666C1004C2121 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1A0EB33A233657DC00D00D70 /* Info.plist */,
+				1A0EB335233657DC00D00D70 /* Assets.xcassets */,
+				1A0EB332233657DB00D00D70 /* QuizApp.xcdatamodeld */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1A1886C6233666D2004C2121 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1A0EB337233657DC00D00D70 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		1A1886C7233666FD004C2121 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				1A0EB329233657DB00D00D70 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,7 +294,6 @@
 				1A0EB32E233657DB00D00D70 /* ViewController.swift in Sources */,
 				1A0EB32A233657DB00D00D70 /* AppDelegate.swift in Sources */,
 				1A0EB334233657DB00D00D70 /* QuizApp.xcdatamodeld in Sources */,
-				1A0EB32C233657DB00D00D70 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +398,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -424,7 +452,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -439,12 +467,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 77FV36N6JL;
-				INFOPLIST_FILE = QuizApp/Info.plist;
+				INFOPLIST_FILE = "QuizApp/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = jvpc.QuizApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -457,12 +487,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 77FV36N6JL;
-				INFOPLIST_FILE = QuizApp/Info.plist;
+				INFOPLIST_FILE = "QuizApp/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = jvpc.QuizApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
