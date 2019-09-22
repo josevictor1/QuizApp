@@ -16,12 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var mainCoordinator: Coordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        setUpRootViewController()
+        return true
+    }
+    
+    private func setUpRootViewController() {
         window = UIWindow(frame: UIScreen.main.bounds)
         mainCoordinator = MainCoordinator.instance()
-        window?.rootViewController = mainCoordinator?.navigationController
         mainCoordinator?.start()
+        window?.rootViewController = mainCoordinator?.navigationController
         window?.makeKeyAndVisible()
-        return true
     }
 }
 

@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  QuizApp
+
+  Created by José Victor Pereira Costa on 22/09/19.
+  Copyright © 2019 José Victor Pereira Costa. All rights reserved.
+*/
+
+// Congradulations Alert
+"CONGRADULATIONS" = "Congradulations";
+"CONGRADULATIONS_MESSAGE" = "Good job! You found all the answers on time. Keep yp with the great work.";
+"PLAY_AGAIN" = "Play Again";
+
+// Time finished Alert
+"TIME_FINISHED" = "Time finished";
+"TIME_FINISHED_MESSAGE" = "Sorry, time is up! You got %d out of %d answers";
+"TRY_AGAIN" = "Try Again";
