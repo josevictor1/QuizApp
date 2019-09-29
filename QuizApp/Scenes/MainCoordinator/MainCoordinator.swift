@@ -20,7 +20,7 @@ class MainCoordinator: Coordinator {
     }
     
     func start() {
-        let viewController = KeyWordsViewController.instantiate()
+        let viewController = KeywordViewController.instantiate()
         navigationController.setViewControllers([viewController], animated: false)
     }
     

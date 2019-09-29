@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Commons
 
 class PanelViewController: UIViewController {
     
@@ -18,10 +19,15 @@ class PanelViewController: UIViewController {
     
     var onTimeFinish: (() -> Void)?
     
+    lazy var countDownTimer: CountDownTimer = {
+        return CountDownTimer(startTime: 300, timeLimit: 0)
+    }()
+    
     // MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpCountDownTimer()
     }
     
     // MARK: - IBActions
@@ -30,36 +36,37 @@ class PanelViewController: UIViewController {
         updatePanelState()
     }
     
+    
+    // MARK: - Set up
+    
+    private func setUpCountDownTimer() {
+        countDownTimer.onTick = { time in
+            self.timerLabel.text = time.formatToMinutesAndSeconds()
+        }
+        countDownTimer.onFinish = { [unowned self] in
+            self.onTimeFinish?()
+        }
+    }
+    
     // MARK: - Logic
     
     private func updatePanelState() {
         guard let text = controlButton.titleLabel?.text, let state = PanelState(rawValue: text) else { return }
         switch state {
         case .reset:
-            controlButton.titleLabel?.text = PanelState.start.rawValue
-            resetScore()
-            resetTimer()
+            controlButton.setTitle(PanelState.start.rawValue, for: .normal)
+            reset()
         case .start:
-            controlButton.titleLabel?.text = PanelState.reset.rawValue
-            startTimer()
-            startScore()
+            controlButton.setTitle(PanelState.reset.rawValue, for: .normal)
+            start()
         }
     }
     
-    private func startTimer() {
-        
+    private func start() {
+        countDownTimer.start()
     }
     
-    private func startScore() {
-        
+    private func reset() {
+        countDownTimer.stop()
     }
-    
-    private func resetTimer() {
-        
-    }
-    
-    private func resetScore() {
-        
-    }
-    
 }

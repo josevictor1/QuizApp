@@ -15,10 +15,10 @@
 		1A0EB34F233657DC00D00D70 /* QuizAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0EB34E233657DC00D00D70 /* QuizAppUITests.swift */; };
 		1A58F5AA23367D0F002F459C /* Commons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A58F5A923367D0F002F459C /* Commons.framework */; };
 		1A58F5AB23367D0F002F459C /* Commons.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A58F5A923367D0F002F459C /* Commons.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1AA6FB892336AED300BC2B3A /* KeyWordsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AA6FB882336AED300BC2B3A /* KeyWordsViewController.storyboard */; };
+		1AA6FB892336AED300BC2B3A /* KeywordViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AA6FB882336AED300BC2B3A /* KeywordViewController.storyboard */; };
 		1AA6FB8E2336B63500BC2B3A /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA6FB8D2336B63500BC2B3A /* Networking.framework */; };
 		1AA6FB8F2336B63500BC2B3A /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA6FB8D2336B63500BC2B3A /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1AA6FB932336C5BB00BC2B3A /* KeyWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA6FB922336C5BB00BC2B3A /* KeyWordsViewController.swift */; };
+		1AA6FB932336C5BB00BC2B3A /* KeywordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA6FB922336C5BB00BC2B3A /* KeywordViewController.swift */; };
 		1AA6FB982336D1D800BC2B3A /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1AA6FB952336D1D700BC2B3A /* SF-Pro-Display-Regular.otf */; };
 		1AA6FB992336D1D800BC2B3A /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1AA6FB962336D1D800BC2B3A /* SF-Pro-Display-Bold.otf */; };
 		1AA6FB9A2336D1D800BC2B3A /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1AA6FB972336D1D800BC2B3A /* SF-Pro-Display-Semibold.otf */; };
@@ -77,9 +77,9 @@
 		1A0EB350233657DC00D00D70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A58F5812336797F002F459C /* Netwroking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Netwroking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A58F5A923367D0F002F459C /* Commons.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Commons.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1AA6FB882336AED300BC2B3A /* KeyWordsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KeyWordsViewController.storyboard; sourceTree = "<group>"; };
+		1AA6FB882336AED300BC2B3A /* KeywordViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KeywordViewController.storyboard; sourceTree = "<group>"; };
 		1AA6FB8D2336B63500BC2B3A /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1AA6FB922336C5BB00BC2B3A /* KeyWordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyWordsViewController.swift; sourceTree = "<group>"; };
+		1AA6FB922336C5BB00BC2B3A /* KeywordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordViewController.swift; sourceTree = "<group>"; };
 		1AA6FB952336D1D700BC2B3A /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Regular.otf"; path = "../../../../../../../../Desktop/SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
 		1AA6FB962336D1D800BC2B3A /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Bold.otf"; path = "../../../../../../../../Desktop/SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
 		1AA6FB972336D1D800BC2B3A /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Semibold.otf"; path = "../../../../../../../../Desktop/SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
@@ -172,7 +172,7 @@
 		1A1886C423366684004C2121 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				1AA6FB852336ADAF00BC2B3A /* KeyWords */,
+				1AA6FB852336ADAF00BC2B3A /* Keyword */,
 				1AC9721123369E14005E89AA /* MainCoordinator */,
 			);
 			path = Scenes;
@@ -206,6 +206,15 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
+		1A28DBF9234021450064D679 /* Panel */ = {
+			isa = PBXGroup;
+			children = (
+				1AA6FBCE23371CB900BC2B3A /* PanelViewController.swift */,
+				1AA6FBCC2337157F00BC2B3A /* PanelState.swift */,
+			);
+			path = Panel;
+			sourceTree = "<group>";
+		};
 		1A58F5802336797F002F459C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,16 +226,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1AA6FB852336ADAF00BC2B3A /* KeyWords */ = {
+		1AA6FB852336ADAF00BC2B3A /* Keyword */ = {
 			isa = PBXGroup;
 			children = (
 				1AA6FBCB2337125200BC2B3A /* Model */,
-				1AA6FB882336AED300BC2B3A /* KeyWordsViewController.storyboard */,
-				1AA6FB922336C5BB00BC2B3A /* KeyWordsViewController.swift */,
-				1AA6FBCE23371CB900BC2B3A /* PanelViewController.swift */,
-				1AA6FBCC2337157F00BC2B3A /* PanelState.swift */,
+				1AA6FB882336AED300BC2B3A /* KeywordViewController.storyboard */,
+				1AA6FB922336C5BB00BC2B3A /* KeywordViewController.swift */,
+				1A28DBF9234021450064D679 /* Panel */,
 			);
-			path = KeyWords;
+			path = Keyword;
 			sourceTree = "<group>";
 		};
 		1AA6FB942336D1C500BC2B3A /* Fonts */ = {
@@ -363,7 +371,7 @@
 				1A0EB339233657DC00D00D70 /* LaunchScreen.storyboard in Resources */,
 				1AA6FB992336D1D800BC2B3A /* SF-Pro-Display-Bold.otf in Resources */,
 				1AA6FBD62337296000BC2B3A /* Localizable.strings in Resources */,
-				1AA6FB892336AED300BC2B3A /* KeyWordsViewController.storyboard in Resources */,
+				1AA6FB892336AED300BC2B3A /* KeywordViewController.storyboard in Resources */,
 				1AA6FB982336D1D800BC2B3A /* SF-Pro-Display-Regular.otf in Resources */,
 				1A0EB336233657DC00D00D70 /* Assets.xcassets in Resources */,
 			);
@@ -393,7 +401,7 @@
 				1AA6FBCD2337157F00BC2B3A /* PanelState.swift in Sources */,
 				1AC9721323369E2D005E89AA /* MainCoordinator.swift in Sources */,
 				1A0EB32A233657DB00D00D70 /* AppDelegate.swift in Sources */,
-				1AA6FB932336C5BB00BC2B3A /* KeyWordsViewController.swift in Sources */,
+				1AA6FB932336C5BB00BC2B3A /* KeywordViewController.swift in Sources */,
 				1A0EB334233657DB00D00D70 /* QuizApp.xcdatamodeld in Sources */,
 				1AA6FBCF23371CB900BC2B3A /* PanelViewController.swift in Sources */,
 			);

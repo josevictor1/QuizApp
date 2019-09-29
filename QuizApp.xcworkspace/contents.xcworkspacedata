@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "container:"
+      name = "Application">
+      <FileRef
+         location = "group:QuizApp.xcodeproj">
+      </FileRef>
+   </Group>
    <FileRef
       location = "group:UIComponents/UIComponents.xcodeproj">
    </FileRef>
@@ -9,8 +16,5 @@
    </FileRef>
    <FileRef
       location = "group:/Users/josevictorpereiracosta/Documents/Tests/ArchTouch/QuizMobileApp/QuizApp/Netwroking/Networking.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:QuizApp.xcodeproj">
    </FileRef>
 </Workspace>

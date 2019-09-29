@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A1D23A9233AEA6E00D49BBA /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1D23A8233AEA6E00D49BBA /* UIView+.swift */; };
+		1A1D23AB233AEABD00D49BBA /* KeyboardAvoidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1D23AA233AEABD00D49BBA /* KeyboardAvoidable.swift */; };
+		1A28DBFE234049740064D679 /* CountDownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A28DBFD234049740064D679 /* CountDownTimer.swift */; };
+		1A28DC00234100E00064D679 /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A28DBFF234100E00064D679 /* Int+.swift */; };
 		1A58F59923367D01002F459C /* Commons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A58F58F23367D01002F459C /* Commons.framework */; };
 		1A58F59E23367D01002F459C /* CommonsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A58F59D23367D01002F459C /* CommonsTests.swift */; };
 		1A58F5A023367D01002F459C /* Commons.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A58F59223367D01002F459C /* Commons.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1AA6FB8C2336B0B100BC2B3A /* UIViewController+Instantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA6FB8B2336B0B100BC2B3A /* UIViewController+Instantiable.swift */; };
-		1AA6FBDC2337368500BC2B3A /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA6FBDB2337368500BC2B3A /* Alert.swift */; };
 		1AA6FBDF23373A5100BC2B3A /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA6FBDE23373A5100BC2B3A /* UIViewController+.swift */; };
 		1AC9720E23368423005E89AA /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC9720D23368423005E89AA /* Coordinator.swift */; };
 /* End PBXBuildFile section */
@@ -27,6 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A1D23A8233AEA6E00D49BBA /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		1A1D23AA233AEABD00D49BBA /* KeyboardAvoidable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAvoidable.swift; sourceTree = "<group>"; };
+		1A28DBFD234049740064D679 /* CountDownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownTimer.swift; sourceTree = "<group>"; };
+		1A28DBFF234100E00064D679 /* Int+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+.swift"; sourceTree = "<group>"; };
 		1A58F58F23367D01002F459C /* Commons.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Commons.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A58F59223367D01002F459C /* Commons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Commons.h; sourceTree = "<group>"; };
 		1A58F59323367D01002F459C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -34,7 +41,6 @@
 		1A58F59D23367D01002F459C /* CommonsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonsTests.swift; sourceTree = "<group>"; };
 		1A58F59F23367D01002F459C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AA6FB8B2336B0B100BC2B3A /* UIViewController+Instantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Instantiable.swift"; sourceTree = "<group>"; };
-		1AA6FBDB2337368500BC2B3A /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		1AA6FBDE23373A5100BC2B3A /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		1AC9720D23368423005E89AA /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +64,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A1D23A7233AE95800D49BBA /* KeyboadAvoidable */ = {
+			isa = PBXGroup;
+			children = (
+				1A1D23A8233AEA6E00D49BBA /* UIView+.swift */,
+				1A1D23AA233AEABD00D49BBA /* KeyboardAvoidable.swift */,
+			);
+			path = KeyboadAvoidable;
+			sourceTree = "<group>";
+		};
+		1A28DBFA234046C50064D679 /* CountDownTimer */ = {
+			isa = PBXGroup;
+			children = (
+				1A28DBFD234049740064D679 /* CountDownTimer.swift */,
+			);
+			path = CountDownTimer;
+			sourceTree = "<group>";
+		};
 		1A58F58523367D00002F459C = {
 			isa = PBXGroup;
 			children = (
@@ -79,7 +102,8 @@
 		1A58F59123367D01002F459C /* Commons */ = {
 			isa = PBXGroup;
 			children = (
-				1AA6FBDD233736EF00BC2B3A /* Alert */,
+				1A28DBFA234046C50064D679 /* CountDownTimer */,
+				1A1D23A7233AE95800D49BBA /* KeyboadAvoidable */,
 				1AA6FB8A2336B06F00BC2B3A /* Extensions */,
 				1AC9720C2336840D005E89AA /* Coordinator */,
 				1A58F59223367D01002F459C /* Commons.h */,
@@ -102,16 +126,9 @@
 			children = (
 				1AA6FB8B2336B0B100BC2B3A /* UIViewController+Instantiable.swift */,
 				1AA6FBDE23373A5100BC2B3A /* UIViewController+.swift */,
+				1A28DBFF234100E00064D679 /* Int+.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		1AA6FBDD233736EF00BC2B3A /* Alert */ = {
-			isa = PBXGroup;
-			children = (
-				1AA6FBDB2337368500BC2B3A /* Alert.swift */,
-			);
-			path = Alert;
 			sourceTree = "<group>";
 		};
 		1AC9720C2336840D005E89AA /* Coordinator */ = {
@@ -235,7 +252,10 @@
 				1AC9720E23368423005E89AA /* Coordinator.swift in Sources */,
 				1AA6FB8C2336B0B100BC2B3A /* UIViewController+Instantiable.swift in Sources */,
 				1AA6FBDF23373A5100BC2B3A /* UIViewController+.swift in Sources */,
-				1AA6FBDC2337368500BC2B3A /* Alert.swift in Sources */,
+				1A1D23AB233AEABD00D49BBA /* KeyboardAvoidable.swift in Sources */,
+				1A1D23A9233AEA6E00D49BBA /* UIView+.swift in Sources */,
+				1A28DC00234100E00064D679 /* Int+.swift in Sources */,
+				1A28DBFE234049740064D679 /* CountDownTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

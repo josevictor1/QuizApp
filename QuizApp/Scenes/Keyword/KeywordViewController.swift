@@ -8,8 +8,9 @@
 
 import UIKit
 import UIComponents
+import Commons
 
-class KeyWordsViewController: UIViewController {
+class KeywordViewController: UIViewController {
     
     // MARK: - IBOutlets
     
@@ -23,7 +24,7 @@ class KeyWordsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavigationController()
-        presentCongradulationsAlert()
+        panelContainer.register()
     }
     
     // MARK: - Set up
@@ -48,7 +49,7 @@ class KeyWordsViewController: UIViewController {
         presentTimeFinishedAlert()
     }
     
-    // MARK: Alerts
+    // MARK: - Alerts
     
     private func presentCongradulationsAlert() {
         presentAlert(title: NSLocalizedString("CONGRADULATIONS", comment: ""),

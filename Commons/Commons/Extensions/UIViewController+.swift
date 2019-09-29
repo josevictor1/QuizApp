@@ -16,7 +16,7 @@ public extension UIViewController {
             self.dismiss(animated: true, completion: completion)
         }
         alertController.addAction(action)
-        present(alertController, animated: true)
+        navigationController?.present(alertController, animated: true)
     }
 
 }
