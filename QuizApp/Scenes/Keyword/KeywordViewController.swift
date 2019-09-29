@@ -19,6 +19,10 @@ class KeywordViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var panelContainer: UIView!
     
+    // MARK: - Properties
+    
+    private var panelViewController: PanelViewController?
+    
     // MARK: - Life cycle
     
     override func viewDidLoad() {
@@ -34,13 +38,18 @@ class KeywordViewController: UIViewController {
         navigationController.navigationBar.isHidden = true
     }
     
+    private func setUpPannerViewController(_ panelViewController: PanelViewController) {
+        self.panelViewController = panelViewController
+        self.panelViewController?.onTimeFinish = { [unowned self] in
+            self.timeDidFinish()
+        }
+    }
+    
     // MARK: - Prepare for segue
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let viewController = segue.destination as? PanelViewController else { return }
-        viewController.onTimeFinish = { [unowned self] in
-            self.timeDidFinish()
-        }
+        setUpPannerViewController(viewController)
     }
     
     // MARK: - Logic

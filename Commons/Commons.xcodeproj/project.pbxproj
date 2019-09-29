@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1A1D23A9233AEA6E00D49BBA /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1D23A8233AEA6E00D49BBA /* UIView+.swift */; };
 		1A1D23AB233AEABD00D49BBA /* KeyboardAvoidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1D23AA233AEABD00D49BBA /* KeyboardAvoidable.swift */; };
-		1A28DBFE234049740064D679 /* CountDownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A28DBFD234049740064D679 /* CountDownTimer.swift */; };
+		1A28DBFE234049740064D679 /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A28DBFD234049740064D679 /* CountdownTimer.swift */; };
 		1A28DC00234100E00064D679 /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A28DBFF234100E00064D679 /* Int+.swift */; };
 		1A58F59923367D01002F459C /* Commons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A58F58F23367D01002F459C /* Commons.framework */; };
 		1A58F59E23367D01002F459C /* CommonsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A58F59D23367D01002F459C /* CommonsTests.swift */; };
@@ -32,7 +32,7 @@
 /* Begin PBXFileReference section */
 		1A1D23A8233AEA6E00D49BBA /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		1A1D23AA233AEABD00D49BBA /* KeyboardAvoidable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAvoidable.swift; sourceTree = "<group>"; };
-		1A28DBFD234049740064D679 /* CountDownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownTimer.swift; sourceTree = "<group>"; };
+		1A28DBFD234049740064D679 /* CountdownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
 		1A28DBFF234100E00064D679 /* Int+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+.swift"; sourceTree = "<group>"; };
 		1A58F58F23367D01002F459C /* Commons.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Commons.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A58F59223367D01002F459C /* Commons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Commons.h; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 		1A28DBFA234046C50064D679 /* CountDownTimer */ = {
 			isa = PBXGroup;
 			children = (
-				1A28DBFD234049740064D679 /* CountDownTimer.swift */,
+				1A28DBFD234049740064D679 /* CountdownTimer.swift */,
 			);
 			path = CountDownTimer;
 			sourceTree = "<group>";
@@ -255,7 +255,7 @@
 				1A1D23AB233AEABD00D49BBA /* KeyboardAvoidable.swift in Sources */,
 				1A1D23A9233AEA6E00D49BBA /* UIView+.swift in Sources */,
 				1A28DC00234100E00064D679 /* Int+.swift in Sources */,
-				1A28DBFE234049740064D679 /* CountDownTimer.swift in Sources */,
+				1A28DBFE234049740064D679 /* CountdownTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

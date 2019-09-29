@@ -104,7 +104,7 @@
                         <viewLayoutGuide key="safeArea" id="rjU-qd-HMZ"/>
                     </view>
                     <connections>
-                        <outlet property="panelContainer" destination="hCr-nF-V80" id="zWj-PQ-QG9"/>
+                        <outlet property="panelContainer" destination="hCr-nF-V80" id="8Tt-Kw-m6v"/>
                         <outlet property="tableView" destination="IsD-TW-ksy" id="6xg-fP-uVU"/>
                         <outlet property="titleLabel" destination="sF3-JZ-Ae2" id="26j-T5-Yfp"/>
                         <outlet property="wordInputTextField" destination="LRE-ae-HUb" id="dkc-78-URz"/>

@@ -19,8 +19,8 @@ class PanelViewController: UIViewController {
     
     var onTimeFinish: (() -> Void)?
     
-    lazy var countDownTimer: CountDownTimer = {
-        return CountDownTimer(startTime: 300, timeLimit: 0)
+    lazy var countDownTimer: CountdownTimer = {
+        return CountdownTimer(startTime: 300, timeLimit: 0)
     }()
     
     // MARK: - Life cycle
@@ -35,7 +35,6 @@ class PanelViewController: UIViewController {
     @IBAction func controButtonTapped(_ sender: UIButton) {
         updatePanelState()
     }
-    
     
     // MARK: - Set up
     

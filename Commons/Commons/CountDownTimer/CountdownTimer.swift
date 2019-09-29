@@ -1,5 +1,5 @@
 //
-//  CountDownTimer.swift
+//  CountdownTimer.swift
 //  Commons
 //
 //  Created by José Victor Pereira Costa on 28/09/19.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class CountDownTimer {
+public class CountdownTimer {
     
     // MARK: - Properties
     
