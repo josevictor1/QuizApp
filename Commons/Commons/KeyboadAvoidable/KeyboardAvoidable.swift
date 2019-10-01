@@ -9,9 +9,11 @@
 import UIKit
 
 public protocol KeyboardAvoidable: AnyObject {
+    
+    var onShow: ((CGFloat) -> Void)? { get set }
+    var onHide: ((CGFloat) -> Void)? { get set }
+    
     func register()
     func keyboadWillShow(_ notification: Notification)
     func keyboardWillHide(_ notification: Notification)
 }
-
-

@@ -18,17 +18,23 @@ class KeywordViewController: UIViewController {
     @IBOutlet weak var wordInputTextField: CustomTextField!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var panelContainer: UIView!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     // MARK: - Properties
     
     private var panelViewController: PanelViewController?
+    private var keyboardAvoidingHelper: KeyboardAvoidable?
+    private var keywordTableViewDataSource: KeywordTableViewDataSource?
+    private var keywordDictionary: [String: String] = ["asdf": "Asdf", "vre": "Vre", "becxc": "Becxc"]
     
     // MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavigationController()
-        panelContainer.register()
+        setUpKeyboardAvoiding()
+        setUpKewordTextFieldDelegate()
+        setUpKeywordTableViewDataSource()
     }
     
     // MARK: - Set up
@@ -38,11 +44,39 @@ class KeywordViewController: UIViewController {
         navigationController.navigationBar.isHidden = true
     }
     
+    private func setUpKeyboardAvoiding() {
+        keyboardAvoidingHelper = KeyboardAvoidingHelper()
+        keyboardAvoidingHelper?.onShow = { [unowned self] height in
+            UIView.animate(withDuration: 0.25) {
+                self.bottomConstraint.constant += height
+                self.view.layoutIfNeeded()
+            }
+        }
+        
+        keyboardAvoidingHelper?.onHide = { [unowned self] height in
+            UIView.animate(withDuration: 0.25) {
+                self.bottomConstraint.constant -= height
+                self.view.layoutIfNeeded()
+            }
+        }
+        keyboardAvoidingHelper?.register()
+    }
+    
+    private func setUpKewordTextFieldDelegate() {
+        wordInputTextField.delegate = self
+    }
+    
     private func setUpPannerViewController(_ panelViewController: PanelViewController) {
         self.panelViewController = panelViewController
         self.panelViewController?.onTimeFinish = { [unowned self] in
             self.timeDidFinish()
         }
+    }
+    
+    private func setUpKeywordTableViewDataSource() {
+        keywordTableViewDataSource = KeywordTableViewDataSource(tableView: tableView)
+        tableView.dataSource = keywordTableViewDataSource
+        tableView.register(cell: KeywordTableViewCell.self)
     }
     
     // MARK: - Prepare for segue
@@ -58,18 +92,27 @@ class KeywordViewController: UIViewController {
         presentTimeFinishedAlert()
     }
     
+    // MARK: - Actions
+    
+    @IBAction func editingChanged(_ sender: CustomTextField) {
+        if let text = sender.text, let answer = keywordDictionary[text] {
+            keywordTableViewDataSource?.words.append(answer)
+            sender.text = ""
+        }
+    }
+    
     // MARK: - Alerts
     
     private func presentCongradulationsAlert() {
-        presentAlert(title: NSLocalizedString("CONGRADULATIONS", comment: ""),
-                     message: NSLocalizedString("CONGRADULATIONS_MESSAGE", comment: ""),
-                     action: NSLocalizedString("PLAY_AGAIN", comment: "")) { }
+        presentAlert(title: "CONGRADULATIONS".localized(),
+                     message: "CONGRADULATIONS_MESSAGE".localized(),
+                     action: "PLAY_AGAIN".localized()) { }
     }
     
     private func presentTimeFinishedAlert() {
-        presentAlert(title: NSLocalizedString("TIME_FINISHED", comment: ""),
-                     message: NSLocalizedString("TIME_FINISHED_MESSAGE", comment: ""),
-                     action: NSLocalizedString("TRY_AGAIN", comment: "")) { }
+        presentAlert(title: "TIME_FINISHED".localized(),
+                     message: "TIME_FINISHED_MESSAGE".localized(),
+                     action: "TRY_AGAIN".localized()) { }
     }
     
 }

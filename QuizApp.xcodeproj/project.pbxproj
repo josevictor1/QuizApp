@@ -15,6 +15,10 @@
 		1A0EB34F233657DC00D00D70 /* QuizAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0EB34E233657DC00D00D70 /* QuizAppUITests.swift */; };
 		1A58F5AA23367D0F002F459C /* Commons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A58F5A923367D0F002F459C /* Commons.framework */; };
 		1A58F5AB23367D0F002F459C /* Commons.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A58F5A923367D0F002F459C /* Commons.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1A5F1882234177A1007035A4 /* KeywordViewController+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5F1881234177A1007035A4 /* KeywordViewController+UITextFieldDelegate.swift */; };
+		1A5F1884234179AD007035A4 /* KeywordTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5F1883234179AD007035A4 /* KeywordTableViewDataSource.swift */; };
+		1A5F18882341804A007035A4 /* KeywordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5F18862341804A007035A4 /* KeywordTableViewCell.swift */; };
+		1A5F18892341804A007035A4 /* KeywordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A5F18872341804A007035A4 /* KeywordTableViewCell.xib */; };
 		1AA6FB892336AED300BC2B3A /* KeywordViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AA6FB882336AED300BC2B3A /* KeywordViewController.storyboard */; };
 		1AA6FB8E2336B63500BC2B3A /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA6FB8D2336B63500BC2B3A /* Networking.framework */; };
 		1AA6FB8F2336B63500BC2B3A /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA6FB8D2336B63500BC2B3A /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -77,6 +81,10 @@
 		1A0EB350233657DC00D00D70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A58F5812336797F002F459C /* Netwroking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Netwroking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A58F5A923367D0F002F459C /* Commons.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Commons.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A5F1881234177A1007035A4 /* KeywordViewController+UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeywordViewController+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
+		1A5F1883234179AD007035A4 /* KeywordTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordTableViewDataSource.swift; sourceTree = "<group>"; };
+		1A5F18862341804A007035A4 /* KeywordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordTableViewCell.swift; sourceTree = "<group>"; };
+		1A5F18872341804A007035A4 /* KeywordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeywordTableViewCell.xib; sourceTree = "<group>"; };
 		1AA6FB882336AED300BC2B3A /* KeywordViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KeywordViewController.storyboard; sourceTree = "<group>"; };
 		1AA6FB8D2336B63500BC2B3A /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AA6FB922336C5BB00BC2B3A /* KeywordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordViewController.swift; sourceTree = "<group>"; };
@@ -145,8 +153,8 @@
 			children = (
 				1A1886C7233666FD004C2121 /* AppDelegate */,
 				1A1886C6233666D2004C2121 /* LaunchScreen */,
-				1A1886C5233666C1004C2121 /* SupportingFiles */,
 				1A1886C423366684004C2121 /* Scenes */,
+				1A1886C5233666C1004C2121 /* SupportingFiles */,
 			);
 			path = QuizApp;
 			sourceTree = "<group>";
@@ -226,13 +234,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1A5F188023414EA9007035A4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1A5F18852341801C007035A4 /* KeywordTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				1A5F18862341804A007035A4 /* KeywordTableViewCell.swift */,
+				1A5F18872341804A007035A4 /* KeywordTableViewCell.xib */,
+			);
+			path = KeywordTableViewCell;
+			sourceTree = "<group>";
+		};
 		1AA6FB852336ADAF00BC2B3A /* Keyword */ = {
 			isa = PBXGroup;
 			children = (
-				1AA6FBCB2337125200BC2B3A /* Model */,
+				1A5F18852341801C007035A4 /* KeywordTableViewCell */,
+				1A28DBF9234021450064D679 /* Panel */,
+				1A5F188023414EA9007035A4 /* Model */,
 				1AA6FB882336AED300BC2B3A /* KeywordViewController.storyboard */,
 				1AA6FB922336C5BB00BC2B3A /* KeywordViewController.swift */,
-				1A28DBF9234021450064D679 /* Panel */,
+				1A5F1881234177A1007035A4 /* KeywordViewController+UITextFieldDelegate.swift */,
+				1A5F1883234179AD007035A4 /* KeywordTableViewDataSource.swift */,
 			);
 			path = Keyword;
 			sourceTree = "<group>";
@@ -245,13 +272,6 @@
 				1AA6FB972336D1D800BC2B3A /* SF-Pro-Display-Semibold.otf */,
 			);
 			path = Fonts;
-			sourceTree = "<group>";
-		};
-		1AA6FBCB2337125200BC2B3A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		1AC9721123369E14005E89AA /* MainCoordinator */ = {
@@ -368,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AA6FB9A2336D1D800BC2B3A /* SF-Pro-Display-Semibold.otf in Resources */,
+				1A5F18892341804A007035A4 /* KeywordTableViewCell.xib in Resources */,
 				1A0EB339233657DC00D00D70 /* LaunchScreen.storyboard in Resources */,
 				1AA6FB992336D1D800BC2B3A /* SF-Pro-Display-Bold.otf in Resources */,
 				1AA6FBD62337296000BC2B3A /* Localizable.strings in Resources */,
@@ -398,9 +419,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A5F1882234177A1007035A4 /* KeywordViewController+UITextFieldDelegate.swift in Sources */,
 				1AA6FBCD2337157F00BC2B3A /* PanelState.swift in Sources */,
 				1AC9721323369E2D005E89AA /* MainCoordinator.swift in Sources */,
 				1A0EB32A233657DB00D00D70 /* AppDelegate.swift in Sources */,
+				1A5F1884234179AD007035A4 /* KeywordTableViewDataSource.swift in Sources */,
+				1A5F18882341804A007035A4 /* KeywordTableViewCell.swift in Sources */,
 				1AA6FB932336C5BB00BC2B3A /* KeywordViewController.swift in Sources */,
 				1A0EB334233657DB00D00D70 /* QuizApp.xcdatamodeld in Sources */,
 				1AA6FBCF23371CB900BC2B3A /* PanelViewController.swift in Sources */,

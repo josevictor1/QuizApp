@@ -8,9 +8,19 @@
 
 import UIKit
 
-extension UIView: KeyboardAvoidable {
+public class KeyboardAvoidingHelper: KeyboardAvoidable {
     
-    //var didShow = false
+    // MARK: - Properties
+    
+    private var didShow = false
+    public var onShow: ((CGFloat) -> Void)?
+    public var onHide: ((CGFloat) -> Void)?
+    
+    // MARK: - Initializer
+    
+    public init() {}
+    
+    // MARK: - Logic
     
     public func register() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboadWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -18,29 +28,19 @@ extension UIView: KeyboardAvoidable {
     }
     
     @objc public func keyboadWillShow(_ notification: Notification) {
-        guard let keyboardFrame = extractKeyboardFrame(from: notification) else { return }
-        let height = keyboardFrame.height
-        setBottomConstraint(with: height)
-        frame.origin.y -= height
-        UIView.animate(withDuration: 0.25) {
-            self.superview?.layoutIfNeeded()
-        }
+        guard let keyboardFrame = extractKeyboardFrame(from: notification), !didShow else { return }
+        didShow = !didShow
+        onShow?(keyboardFrame.height)
     }
     
     @objc public func keyboardWillHide(_ notification: Notification) {
-        
+        guard let keyboardFrame = extractKeyboardFrame(from: notification), didShow else { return }
+        didShow = !didShow
+        onHide?(keyboardFrame.height)
     }
     
     private func extractKeyboardFrame(from notification: Notification) -> CGRect? {
         return  notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect
-    }
-    
-    private func setBottomConstraint(with height: CGFloat) {
-        constraints.forEach { constraint in
-            if constraint.firstAttribute == .bottom || constraint.firstAttribute == .bottomMargin {
-                constraint.constant = height
-            }
-        }
     }
     
 }

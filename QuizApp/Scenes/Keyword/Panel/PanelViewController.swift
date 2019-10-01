@@ -39,7 +39,7 @@ class PanelViewController: UIViewController {
     // MARK: - Set up
     
     private func setUpCountDownTimer() {
-        countDownTimer.onTick = { time in
+        countDownTimer.onTick = { [unowned self] time in
             self.timerLabel.text = time.formatToMinutesAndSeconds()
         }
         countDownTimer.onFinish = { [unowned self] in

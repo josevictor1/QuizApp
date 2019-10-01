@@ -27,6 +27,16 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IsD-TW-ksy">
                                 <rect key="frame" x="16" y="126.5" width="288" height="441.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" id="rfJ-mt-kgI">
+                                        <rect key="frame" x="0.0" y="28" width="288" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rfJ-mt-kgI" id="3hj-7o-yV5">
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hCr-nF-V80">
                                 <rect key="frame" x="0.0" y="418" width="320" height="150"/>
@@ -74,6 +84,9 @@
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="editingChanged:" destination="NF9-Tw-JcF" eventType="editingChanged" id="3Ki-4n-DNB"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -104,6 +117,7 @@
                         <viewLayoutGuide key="safeArea" id="rjU-qd-HMZ"/>
                     </view>
                     <connections>
+                        <outlet property="bottomConstraint" destination="a7b-GC-E9W" id="VnQ-sv-6yj"/>
                         <outlet property="panelContainer" destination="hCr-nF-V80" id="8Tt-Kw-m6v"/>
                         <outlet property="tableView" destination="IsD-TW-ksy" id="6xg-fP-uVU"/>
                         <outlet property="titleLabel" destination="sF3-JZ-Ae2" id="26j-T5-Yfp"/>
@@ -147,8 +161,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WdT-Si-O95">
-                                        <rect key="frame" x="189" y="0.0" width="99" height="41"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WdT-Si-O95">
+                                        <rect key="frame" x="190.5" y="0.0" width="97.5" height="41"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="34"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
