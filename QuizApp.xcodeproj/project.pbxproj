@@ -13,12 +13,29 @@
 		1A0EB339233657DC00D00D70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A0EB337233657DC00D00D70 /* LaunchScreen.storyboard */; };
 		1A0EB344233657DC00D00D70 /* QuizAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0EB343233657DC00D00D70 /* QuizAppTests.swift */; };
 		1A0EB34F233657DC00D00D70 /* QuizAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0EB34E233657DC00D00D70 /* QuizAppUITests.swift */; };
+		1A1E884323444AC500F9B9ED /* KeywordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E884223444AC500F9B9ED /* KeywordResponse.swift */; };
+		1A1E884523444B5300F9B9ED /* KeywordEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E884423444B5300F9B9ED /* KeywordEndpoint.swift */; };
+		1A1E884723444C3A00F9B9ED /* KeywordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E884623444C3A00F9B9ED /* KeywordService.swift */; };
+		1A1E88492344512200F9B9ED /* Keywords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E88482344512200F9B9ED /* Keywords.swift */; };
+		1A1E884B234453DB00F9B9ED /* KeywordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E884A234453DB00F9B9ED /* KeywordController.swift */; };
 		1A58F5AA23367D0F002F459C /* Commons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A58F5A923367D0F002F459C /* Commons.framework */; };
 		1A58F5AB23367D0F002F459C /* Commons.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A58F5A923367D0F002F459C /* Commons.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1AA6FB872336AEC200BC2B3A /* KeyWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA6FB862336AEC200BC2B3A /* KeyWordsViewController.swift */; };
-		1AA6FB892336AED300BC2B3A /* KeyWordsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AA6FB882336AED300BC2B3A /* KeyWordsViewController.storyboard */; };
+		1A5F1882234177A1007035A4 /* KeywordViewController+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5F1881234177A1007035A4 /* KeywordViewController+UITextFieldDelegate.swift */; };
+		1A5F1884234179AD007035A4 /* KeywordTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5F1883234179AD007035A4 /* KeywordTableViewDataSource.swift */; };
+		1A5F18882341804A007035A4 /* KeywordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5F18862341804A007035A4 /* KeywordTableViewCell.swift */; };
+		1A5F18892341804A007035A4 /* KeywordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A5F18872341804A007035A4 /* KeywordTableViewCell.xib */; };
+		1AA6FB892336AED300BC2B3A /* KeywordViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AA6FB882336AED300BC2B3A /* KeywordViewController.storyboard */; };
 		1AA6FB8E2336B63500BC2B3A /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA6FB8D2336B63500BC2B3A /* Networking.framework */; };
 		1AA6FB8F2336B63500BC2B3A /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA6FB8D2336B63500BC2B3A /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1AA6FB932336C5BB00BC2B3A /* KeywordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA6FB922336C5BB00BC2B3A /* KeywordViewController.swift */; };
+		1AA6FB982336D1D800BC2B3A /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1AA6FB952336D1D700BC2B3A /* SF-Pro-Display-Regular.otf */; };
+		1AA6FB992336D1D800BC2B3A /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1AA6FB962336D1D800BC2B3A /* SF-Pro-Display-Bold.otf */; };
+		1AA6FB9A2336D1D800BC2B3A /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1AA6FB972336D1D800BC2B3A /* SF-Pro-Display-Semibold.otf */; };
+		1AA6FBC42336FD4000BC2B3A /* UIComponents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA6FBC22336FD4000BC2B3A /* UIComponents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1AA6FBC8233709D600BC2B3A /* UIComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA6FBC22336FD4000BC2B3A /* UIComponents.framework */; };
+		1AA6FBCD2337157F00BC2B3A /* PanelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA6FBCC2337157F00BC2B3A /* PanelState.swift */; };
+		1AA6FBCF23371CB900BC2B3A /* PanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA6FBCE23371CB900BC2B3A /* PanelViewController.swift */; };
+		1AA6FBD62337296000BC2B3A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1AA6FBD52337296000BC2B3A /* Localizable.strings */; };
 		1AC9721323369E2D005E89AA /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC9721223369E2D005E89AA /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +64,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				1AA6FB8F2336B63500BC2B3A /* Networking.framework in Embed Frameworks */,
+				1AA6FBC42336FD4000BC2B3A /* UIComponents.framework in Embed Frameworks */,
 				1A58F5AB23367D0F002F459C /* Commons.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -60,18 +78,34 @@
 		1A0EB333233657DB00D00D70 /* QuizApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuizApp.xcdatamodel; sourceTree = "<group>"; };
 		1A0EB335233657DC00D00D70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A0EB338233657DC00D00D70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		1A0EB33A233657DC00D00D70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A0EB33F233657DC00D00D70 /* QuizAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A0EB343233657DC00D00D70 /* QuizAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAppTests.swift; sourceTree = "<group>"; };
 		1A0EB345233657DC00D00D70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A0EB34A233657DC00D00D70 /* QuizAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A0EB34E233657DC00D00D70 /* QuizAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAppUITests.swift; sourceTree = "<group>"; };
 		1A0EB350233657DC00D00D70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A1E884223444AC500F9B9ED /* KeywordResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordResponse.swift; sourceTree = "<group>"; };
+		1A1E884423444B5300F9B9ED /* KeywordEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordEndpoint.swift; sourceTree = "<group>"; };
+		1A1E884623444C3A00F9B9ED /* KeywordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordService.swift; sourceTree = "<group>"; };
+		1A1E88482344512200F9B9ED /* Keywords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keywords.swift; sourceTree = "<group>"; };
+		1A1E884A234453DB00F9B9ED /* KeywordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordController.swift; sourceTree = "<group>"; };
 		1A58F5812336797F002F459C /* Netwroking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Netwroking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A58F5A923367D0F002F459C /* Commons.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Commons.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1AA6FB862336AEC200BC2B3A /* KeyWordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyWordsViewController.swift; sourceTree = "<group>"; };
-		1AA6FB882336AED300BC2B3A /* KeyWordsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KeyWordsViewController.storyboard; sourceTree = "<group>"; };
+		1A5F1881234177A1007035A4 /* KeywordViewController+UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeywordViewController+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
+		1A5F1883234179AD007035A4 /* KeywordTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordTableViewDataSource.swift; sourceTree = "<group>"; };
+		1A5F18862341804A007035A4 /* KeywordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordTableViewCell.swift; sourceTree = "<group>"; };
+		1A5F18872341804A007035A4 /* KeywordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeywordTableViewCell.xib; sourceTree = "<group>"; };
+		1AA6FB882336AED300BC2B3A /* KeywordViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KeywordViewController.storyboard; sourceTree = "<group>"; };
 		1AA6FB8D2336B63500BC2B3A /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AA6FB922336C5BB00BC2B3A /* KeywordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordViewController.swift; sourceTree = "<group>"; };
+		1AA6FB952336D1D700BC2B3A /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Regular.otf"; path = "../../../../../../../../Desktop/SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		1AA6FB962336D1D800BC2B3A /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Bold.otf"; path = "../../../../../../../../Desktop/SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
+		1AA6FB972336D1D800BC2B3A /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Semibold.otf"; path = "../../../../../../../../Desktop/SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
+		1AA6FBC22336FD4000BC2B3A /* UIComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UIComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AA6FBC52336FFBC00BC2B3A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AA6FBCC2337157F00BC2B3A /* PanelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelState.swift; sourceTree = "<group>"; };
+		1AA6FBCE23371CB900BC2B3A /* PanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanelViewController.swift; sourceTree = "<group>"; };
+		1AA6FBD52337296000BC2B3A /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		1AC9721223369E2D005E89AA /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AA6FBC8233709D600BC2B3A /* UIComponents.framework in Frameworks */,
 				1AA6FB8E2336B63500BC2B3A /* Networking.framework in Frameworks */,
 				1A58F5AA23367D0F002F459C /* Commons.framework in Frameworks */,
 			);
@@ -128,8 +163,8 @@
 			children = (
 				1A1886C7233666FD004C2121 /* AppDelegate */,
 				1A1886C6233666D2004C2121 /* LaunchScreen */,
-				1A1886C5233666C1004C2121 /* Supporting Files */,
 				1A1886C423366684004C2121 /* Scenes */,
+				1A1886C5233666C1004C2121 /* SupportingFiles */,
 			);
 			path = QuizApp;
 			sourceTree = "<group>";
@@ -155,20 +190,22 @@
 		1A1886C423366684004C2121 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				1AA6FB852336ADAF00BC2B3A /* Key Words */,
+				1AA6FB852336ADAF00BC2B3A /* Keyword */,
 				1AC9721123369E14005E89AA /* MainCoordinator */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		1A1886C5233666C1004C2121 /* Supporting Files */ = {
+		1A1886C5233666C1004C2121 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				1A0EB33A233657DC00D00D70 /* Info.plist */,
+				1AA6FB942336D1C500BC2B3A /* Fonts */,
+				1AA6FBC52336FFBC00BC2B3A /* Info.plist */,
+				1AA6FBD52337296000BC2B3A /* Localizable.strings */,
 				1A0EB335233657DC00D00D70 /* Assets.xcassets */,
 				1A0EB332233657DB00D00D70 /* QuizApp.xcdatamodeld */,
 			);
-			path = "Supporting Files";
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		1A1886C6233666D2004C2121 /* LaunchScreen */ = {
@@ -187,9 +224,19 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
+		1A28DBF9234021450064D679 /* Panel */ = {
+			isa = PBXGroup;
+			children = (
+				1AA6FBCE23371CB900BC2B3A /* PanelViewController.swift */,
+				1AA6FBCC2337157F00BC2B3A /* PanelState.swift */,
+			);
+			path = Panel;
+			sourceTree = "<group>";
+		};
 		1A58F5802336797F002F459C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1AA6FBC22336FD4000BC2B3A /* UIComponents.framework */,
 				1AA6FB8D2336B63500BC2B3A /* Networking.framework */,
 				1A58F5A923367D0F002F459C /* Commons.framework */,
 				1A58F5812336797F002F459C /* Netwroking.framework */,
@@ -197,13 +244,49 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1AA6FB852336ADAF00BC2B3A /* Key Words */ = {
+		1A5F188023414EA9007035A4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1AA6FB862336AEC200BC2B3A /* KeyWordsViewController.swift */,
-				1AA6FB882336AED300BC2B3A /* KeyWordsViewController.storyboard */,
+				1A1E884223444AC500F9B9ED /* KeywordResponse.swift */,
+				1A1E884423444B5300F9B9ED /* KeywordEndpoint.swift */,
+				1A1E884623444C3A00F9B9ED /* KeywordService.swift */,
+				1A1E88482344512200F9B9ED /* Keywords.swift */,
 			);
-			path = "Key Words";
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1A5F18852341801C007035A4 /* KeywordTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				1A5F18862341804A007035A4 /* KeywordTableViewCell.swift */,
+				1A5F18872341804A007035A4 /* KeywordTableViewCell.xib */,
+			);
+			path = KeywordTableViewCell;
+			sourceTree = "<group>";
+		};
+		1AA6FB852336ADAF00BC2B3A /* Keyword */ = {
+			isa = PBXGroup;
+			children = (
+				1A5F18852341801C007035A4 /* KeywordTableViewCell */,
+				1A28DBF9234021450064D679 /* Panel */,
+				1A5F188023414EA9007035A4 /* Model */,
+				1AA6FB882336AED300BC2B3A /* KeywordViewController.storyboard */,
+				1AA6FB922336C5BB00BC2B3A /* KeywordViewController.swift */,
+				1A5F1881234177A1007035A4 /* KeywordViewController+UITextFieldDelegate.swift */,
+				1A5F1883234179AD007035A4 /* KeywordTableViewDataSource.swift */,
+				1A1E884A234453DB00F9B9ED /* KeywordController.swift */,
+			);
+			path = Keyword;
+			sourceTree = "<group>";
+		};
+		1AA6FB942336D1C500BC2B3A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1AA6FB962336D1D800BC2B3A /* SF-Pro-Display-Bold.otf */,
+				1AA6FB952336D1D700BC2B3A /* SF-Pro-Display-Regular.otf */,
+				1AA6FB972336D1D800BC2B3A /* SF-Pro-Display-Semibold.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		1AC9721123369E14005E89AA /* MainCoordinator */ = {
@@ -319,8 +402,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AA6FB9A2336D1D800BC2B3A /* SF-Pro-Display-Semibold.otf in Resources */,
+				1A5F18892341804A007035A4 /* KeywordTableViewCell.xib in Resources */,
 				1A0EB339233657DC00D00D70 /* LaunchScreen.storyboard in Resources */,
-				1AA6FB892336AED300BC2B3A /* KeyWordsViewController.storyboard in Resources */,
+				1AA6FB992336D1D800BC2B3A /* SF-Pro-Display-Bold.otf in Resources */,
+				1AA6FBD62337296000BC2B3A /* Localizable.strings in Resources */,
+				1AA6FB892336AED300BC2B3A /* KeywordViewController.storyboard in Resources */,
+				1AA6FB982336D1D800BC2B3A /* SF-Pro-Display-Regular.otf in Resources */,
 				1A0EB336233657DC00D00D70 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,10 +434,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AA6FB872336AEC200BC2B3A /* KeyWordsViewController.swift in Sources */,
+				1A1E884323444AC500F9B9ED /* KeywordResponse.swift in Sources */,
+				1A1E88492344512200F9B9ED /* Keywords.swift in Sources */,
+				1A1E884723444C3A00F9B9ED /* KeywordService.swift in Sources */,
+				1A5F1882234177A1007035A4 /* KeywordViewController+UITextFieldDelegate.swift in Sources */,
+				1AA6FBCD2337157F00BC2B3A /* PanelState.swift in Sources */,
 				1AC9721323369E2D005E89AA /* MainCoordinator.swift in Sources */,
+				1A1E884523444B5300F9B9ED /* KeywordEndpoint.swift in Sources */,
 				1A0EB32A233657DB00D00D70 /* AppDelegate.swift in Sources */,
+				1A5F1884234179AD007035A4 /* KeywordTableViewDataSource.swift in Sources */,
+				1A5F18882341804A007035A4 /* KeywordTableViewCell.swift in Sources */,
+				1AA6FB932336C5BB00BC2B3A /* KeywordViewController.swift in Sources */,
+				1A1E884B234453DB00F9B9ED /* KeywordController.swift in Sources */,
 				1A0EB334233657DB00D00D70 /* QuizApp.xcdatamodeld in Sources */,
+				1AA6FBCF23371CB900BC2B3A /* PanelViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,7 +615,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 77FV36N6JL;
-				INFOPLIST_FILE = "QuizApp/Supporting Files/Info.plist";
+				INFOPLIST_FILE = QuizApp/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -537,7 +635,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 77FV36N6JL;
-				INFOPLIST_FILE = "QuizApp/Supporting Files/Info.plist";
+				INFOPLIST_FILE = QuizApp/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

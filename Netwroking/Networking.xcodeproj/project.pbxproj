@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A1E881E23443AFC00F9B9ED /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E881D23443AFC00F9B9ED /* Endpoint.swift */; };
+		1A1E882723443CBE00F9B9ED /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E882623443CBE00F9B9ED /* Task.swift */; };
+		1A1E882923443EEC00F9B9ED /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E882823443EEC00F9B9ED /* Method.swift */; };
+		1A1E882E234441CF00F9B9ED /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E882D234441CF00F9B9ED /* ParameterEncoding.swift */; };
+		1A1E88302344420B00F9B9ED /* ParameterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E882F2344420B00F9B9ED /* ParameterProvider.swift */; };
+		1A1E8834234443D500F9B9ED /* URL+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E8833234443D500F9B9ED /* URL+.swift */; };
+		1A1E8836234444F100F9B9ED /* URLRequest+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E8835234444F100F9B9ED /* URLRequest+.swift */; };
+		1A1E8838234445AA00F9B9ED /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E8837234445AA00F9B9ED /* NetworkError.swift */; };
+		1A1E883B2344465F00F9B9ED /* AnyEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E883A2344465F00F9B9ED /* AnyEncodable.swift */; };
+		1A1E883E2344472A00F9B9ED /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E883D2344472A00F9B9ED /* NetworkProvider.swift */; };
+		1A1E88412344476000F9B9ED /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E88402344476000F9B9ED /* Response.swift */; };
 		1A58F57023367973002F459C /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A58F56623367973002F459C /* Networking.framework */; };
 		1A58F57523367973002F459C /* NetwrokingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A58F57423367973002F459C /* NetwrokingTests.swift */; };
 		1A58F57723367973002F459C /* Netwroking.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A58F56923367973002F459C /* Netwroking.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,6 +34,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A1E881D23443AFC00F9B9ED /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		1A1E882623443CBE00F9B9ED /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		1A1E882823443EEC00F9B9ED /* Method.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
+		1A1E882D234441CF00F9B9ED /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		1A1E882F2344420B00F9B9ED /* ParameterProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterProvider.swift; sourceTree = "<group>"; };
+		1A1E8833234443D500F9B9ED /* URL+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+.swift"; sourceTree = "<group>"; };
+		1A1E8835234444F100F9B9ED /* URLRequest+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+.swift"; sourceTree = "<group>"; };
+		1A1E8837234445AA00F9B9ED /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		1A1E883A2344465F00F9B9ED /* AnyEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyEncodable.swift; sourceTree = "<group>"; };
+		1A1E883D2344472A00F9B9ED /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		1A1E88402344476000F9B9ED /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		1A58F56623367973002F459C /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A58F56923367973002F459C /* Netwroking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Netwroking.h; sourceTree = "<group>"; };
 		1A58F56A23367973002F459C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +72,80 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A1E881C2344390B00F9B9ED /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				1A1E881D23443AFC00F9B9ED /* Endpoint.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		1A1E881F23443B4C00F9B9ED /* Method */ = {
+			isa = PBXGroup;
+			children = (
+				1A1E882823443EEC00F9B9ED /* Method.swift */,
+			);
+			path = Method;
+			sourceTree = "<group>";
+		};
+		1A1E882523443CAC00F9B9ED /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				1A1E882623443CBE00F9B9ED /* Task.swift */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		1A1E882C234441B000F9B9ED /* Parameters */ = {
+			isa = PBXGroup;
+			children = (
+				1A1E882D234441CF00F9B9ED /* ParameterEncoding.swift */,
+				1A1E882F2344420B00F9B9ED /* ParameterProvider.swift */,
+			);
+			path = Parameters;
+			sourceTree = "<group>";
+		};
+		1A1E88312344423F00F9B9ED /* NetworkError */ = {
+			isa = PBXGroup;
+			children = (
+				1A1E8837234445AA00F9B9ED /* NetworkError.swift */,
+			);
+			path = NetworkError;
+			sourceTree = "<group>";
+		};
+		1A1E8832234443C500F9B9ED /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1A1E8833234443D500F9B9ED /* URL+.swift */,
+				1A1E8835234444F100F9B9ED /* URLRequest+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1A1E88392344464200F9B9ED /* Encodable */ = {
+			isa = PBXGroup;
+			children = (
+				1A1E883A2344465F00F9B9ED /* AnyEncodable.swift */,
+			);
+			path = Encodable;
+			sourceTree = "<group>";
+		};
+		1A1E883C2344471600F9B9ED /* NetworkProvider */ = {
+			isa = PBXGroup;
+			children = (
+				1A1E883D2344472A00F9B9ED /* NetworkProvider.swift */,
+			);
+			path = NetworkProvider;
+			sourceTree = "<group>";
+		};
+		1A1E883F2344474F00F9B9ED /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				1A1E88402344476000F9B9ED /* Response.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
 		1A58F55C23367973002F459C = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +167,15 @@
 		1A58F56823367973002F459C /* Netwroking */ = {
 			isa = PBXGroup;
 			children = (
+				1A1E883F2344474F00F9B9ED /* Response */,
+				1A1E883C2344471600F9B9ED /* NetworkProvider */,
+				1A1E88392344464200F9B9ED /* Encodable */,
+				1A1E8832234443C500F9B9ED /* Extensions */,
+				1A1E88312344423F00F9B9ED /* NetworkError */,
+				1A1E882C234441B000F9B9ED /* Parameters */,
+				1A1E882523443CAC00F9B9ED /* Task */,
+				1A1E881F23443B4C00F9B9ED /* Method */,
+				1A1E881C2344390B00F9B9ED /* Endpoint */,
 				1A58F56923367973002F459C /* Netwroking.h */,
 				1A58F56A23367973002F459C /* Info.plist */,
 			);
@@ -148,6 +253,7 @@
 				TargetAttributes = {
 					1A58F56523367973002F459C = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 					};
 					1A58F56E23367973002F459C = {
 						CreatedOnToolsVersion = 11.0;
@@ -195,6 +301,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A1E882923443EEC00F9B9ED /* Method.swift in Sources */,
+				1A1E883B2344465F00F9B9ED /* AnyEncodable.swift in Sources */,
+				1A1E8838234445AA00F9B9ED /* NetworkError.swift in Sources */,
+				1A1E8834234443D500F9B9ED /* URL+.swift in Sources */,
+				1A1E882723443CBE00F9B9ED /* Task.swift in Sources */,
+				1A1E882E234441CF00F9B9ED /* ParameterEncoding.swift in Sources */,
+				1A1E881E23443AFC00F9B9ED /* Endpoint.swift in Sources */,
+				1A1E88412344476000F9B9ED /* Response.swift in Sources */,
+				1A1E8836234444F100F9B9ED /* URLRequest+.swift in Sources */,
+				1A1E88302344420B00F9B9ED /* ParameterProvider.swift in Sources */,
+				1A1E883E2344472A00F9B9ED /* NetworkProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +457,7 @@
 		1A58F57B23367973002F459C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 77FV36N6JL;
@@ -356,6 +474,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jvpc.Netwroking;
 				PRODUCT_NAME = Networking;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +483,7 @@
 		1A58F57C23367973002F459C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 77FV36N6JL;
@@ -388,6 +508,7 @@
 		1A58F57E23367973002F459C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 77FV36N6JL;
 				INFOPLIST_FILE = NetwrokingTests/Info.plist;
@@ -406,6 +527,7 @@
 		1A58F57F23367973002F459C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 77FV36N6JL;
 				INFOPLIST_FILE = NetwrokingTests/Info.plist;
