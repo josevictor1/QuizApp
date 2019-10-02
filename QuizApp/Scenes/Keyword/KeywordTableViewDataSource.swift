@@ -16,10 +16,11 @@ class KeywordTableViewDataSource: NSObject {
         self.tableView = tableView
     }
     
-    var words = [String]() {
-        didSet {
-            updateTableView()
-        }
+    var words = [String]()
+    
+    func addKeyword(_ keyword: String) {
+        words.append(keyword)
+        updateTableView()
     }
     
     func updateTableView() {
@@ -27,6 +28,11 @@ class KeywordTableViewDataSource: NSObject {
         tableView.insertRows(at: [IndexPath(row: words.count - 1, section: 0)],
                              with: .top)
         tableView.endUpdates()
+    }
+    
+    func removeAllKeywords() {
+        words.removeAll()
+        tableView.reloadData()
     }
     
 }

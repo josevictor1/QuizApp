@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIViewController {
     
-    func presentAlert(title: String, message: String, action: String, completion: (() -> Void)?) {
+    func presentAlert(title: String, message: String, action: String, completion: (() -> Void)? = nil) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: action, style: .destructive) { [unowned self] _ in
             self.dismiss(animated: true, completion: completion)

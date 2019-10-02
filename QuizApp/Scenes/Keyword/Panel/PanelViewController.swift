@@ -11,16 +11,24 @@ import Commons
 
 class PanelViewController: UIViewController {
     
-    // MARK: - IBOutlets
+    // MARK: - Outlets
     
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var controlButton: UIButton!
     
-    var onTimeFinish: (() -> Void)?
+    // MARK: - Properties
+    
+    var onStart: (() -> Void)?
+    var onTimeFinish: ((Int, Int) -> Void)?
+    var onAnswersFinished: (() -> Void)?
+    var onReset: (() -> Void)?
+    
+    var scoreboardTotal: Int = .zero
+    var scoreboardHitted: Int = .zero
     
     lazy var countDownTimer: CountdownTimer = {
-        return CountdownTimer(startTime: 300, timeLimit: 0)
+        return CountdownTimer(startTime: 300, timeLimit: .zero)
     }()
     
     // MARK: - Life cycle
@@ -28,9 +36,10 @@ class PanelViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpCountDownTimer()
+        updateScoreboard()
     }
     
-    // MARK: - IBActions
+    // MARK: - Actions
     
     @IBAction func controButtonTapped(_ sender: UIButton) {
         updatePanelState()
@@ -43,7 +52,7 @@ class PanelViewController: UIViewController {
             self.timerLabel.text = time.formatToMinutesAndSeconds()
         }
         countDownTimer.onFinish = { [unowned self] in
-            self.onTimeFinish?()
+            self.onTimeFinish?(self.scoreboardTotal, self.scoreboardHitted)
         }
     }
     
@@ -63,9 +72,48 @@ class PanelViewController: UIViewController {
     
     private func start() {
         countDownTimer.start()
+        onStart?()
     }
     
     private func reset() {
         countDownTimer.stop()
+        resetScoreboard()
+        onReset?()
+    }
+    
+    private func resetScoreboard() {
+        scoreboardHitted = .zero
+        updateScoreboard()
+    }
+    
+    private func updateScoreboard() {
+        scoreLabel.text = "\(scoreboardHitted)/\(scoreboardTotal)"
+    }
+    
+    private func presentPlayAgainAlertIfNeeded() {
+        guard scoreboardHitted == scoreboardTotal else { return }
+        onAnswersFinished?()
+    }
+    
+    func keywordWasHitted() {
+        scoreboardHitted += 1
+        updateScoreboard()
+        presentPlayAgainAlertIfNeeded()
+    }
+    
+}
+// MARK: - KeywordViewControllerDelegate
+extension PanelViewController: KeywordViewControllerDelegate {
+    func keywordWasHitted(_ keywordViewController: KeywordViewController) {
+        keywordWasHitted()
+    }
+    
+    func setPanel(_ keywordViewController: KeywordViewController, keywords: Keywords) {
+        scoreboardTotal = keywords.answer.count
+        updateScoreboard()
+    }
+    
+    func resetPanel(_ keywordViewController: KeywordViewController) {
+        reset()
     }
 }

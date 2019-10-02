@@ -15,3 +15,8 @@
 "TIME_FINISHED" = "Time finished";
 "TIME_FINISHED_MESSAGE" = "Sorry, time is up! You got %d out of %d answers";
 "TRY_AGAIN" = "Try Again";
+
+// Network Connection Error
+"ERROR" = "Error";
+"ERROR_MESSAGE" = "Unable to establish connection";
+"OK" = "Ok";

@@ -10,9 +10,15 @@ import UIKit
 import UIComponents
 import Commons
 
+protocol KeywordViewControllerDelegate: AnyObject {
+    func keywordWasHitted(_ keywordViewController: KeywordViewController)
+    func setPanel(_ keywordViewController: KeywordViewController, keywords: Keywords)
+    func resetPanel(_ keywordViewController: KeywordViewController)
+}
+
 class KeywordViewController: UIViewController {
     
-    // MARK: - IBOutlets
+    // MARK: - Outlets
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var wordInputTextField: CustomTextField!
@@ -22,22 +28,29 @@ class KeywordViewController: UIViewController {
     
     // MARK: - Properties
     
-    private var panelViewController: PanelViewController?
+    private weak var delegate: KeywordViewControllerDelegate?
     private var keyboardAvoidingHelper: KeyboardAvoidable?
     private var keywordTableViewDataSource: KeywordTableViewDataSource?
-    private var keywordDictionary: [String: String] = ["asdf": "Asdf", "vre": "Vre", "becxc": "Becxc"]
+    private var keywordController: KeywordControllerProvider?
+    private var keywords: Keywords?
     
     // MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpKeywordController()
+        requestKeywords()
         setUpNavigationController()
         setUpKeyboardAvoiding()
-        setUpKewordTextFieldDelegate()
+        setUpWordInputTextField()
         setUpKeywordTableViewDataSource()
     }
     
     // MARK: - Set up
+    
+    private func setUpKeywordController() {
+        keywordController = KeywordController()
+    }
     
     private func setUpNavigationController() {
         guard  let navigationController = navigationController else { return }
@@ -62,14 +75,24 @@ class KeywordViewController: UIViewController {
         keyboardAvoidingHelper?.register()
     }
     
-    private func setUpKewordTextFieldDelegate() {
+    private func setUpWordInputTextField() {
         wordInputTextField.delegate = self
+        wordInputTextField.isEnabled = false
     }
     
     private func setUpPannerViewController(_ panelViewController: PanelViewController) {
-        self.panelViewController = panelViewController
-        self.panelViewController?.onTimeFinish = { [unowned self] in
-            self.timeDidFinish()
+        delegate = panelViewController
+        panelViewController.onStart = { [unowned self] in
+            self.activateTextField()
+        }
+        panelViewController.onReset = { [unowned self] in
+            self.removeAllCellsFromTableView()
+        }
+        panelViewController.onTimeFinish = { [unowned self] total, hitted in
+            self.presentTimeFinishedAlert(total: total, hitted: hitted)
+        }
+        panelViewController.onAnswersFinished = { [unowned self] in
+            self.presentCongradulationsAlert()
         }
     }
     
@@ -77,6 +100,14 @@ class KeywordViewController: UIViewController {
         keywordTableViewDataSource = KeywordTableViewDataSource(tableView: tableView)
         tableView.dataSource = keywordTableViewDataSource
         tableView.register(cell: KeywordTableViewCell.self)
+    }
+    
+    private func setUpKeywords(_ keywords: Keywords) {
+        DispatchQueue.main.async {
+            self.titleLabel.text = keywords.question
+            self.delegate?.setPanel(self, keywords: keywords)
+        }
+        self.keywords = keywords
     }
     
     // MARK: - Prepare for segue
@@ -88,31 +119,70 @@ class KeywordViewController: UIViewController {
     
     // MARK: - Logic
     
-    private func timeDidFinish() {
-        presentTimeFinishedAlert()
+    private func activateTextField() {
+        wordInputTextField.isEnabled = true
+    }
+    
+    private func removeAllCellsFromTableView() {
+        keywordTableViewDataSource?.removeAllKeywords()
+    }
+    
+    private func requestKeywords() {
+        keywordController?.requestKeywords(completion: { [unowned self] result in
+            switch result {
+            case .success(let response):
+                self.setUpKeywords(response)
+            case .failure(let error):
+                self.presentRequestError(error)
+            }
+        })
     }
     
     // MARK: - Actions
     
     @IBAction func editingChanged(_ sender: CustomTextField) {
-        if let text = sender.text, let answer = keywordDictionary[text] {
-            keywordTableViewDataSource?.words.append(answer)
+        if let text = sender.text, let keyword = keywords, let answer = keyword.answer[text],
+            !(keywordTableViewDataSource?.words.contains(answer) ?? true) {
+            keywordTableViewDataSource?.addKeyword(answer)
             sender.text = ""
+            delegate?.keywordWasHitted(self)
         }
     }
     
     // MARK: - Alerts
     
     private func presentCongradulationsAlert() {
-        presentAlert(title: "CONGRADULATIONS".localized(),
-                     message: "CONGRADULATIONS_MESSAGE".localized(),
-                     action: "PLAY_AGAIN".localized()) { }
+        DispatchQueue.main.async {
+            self.presentAlert(title: "CONGRADULATIONS".localized(),
+                              message: "CONGRADULATIONS_MESSAGE".localized(),
+                              action: "PLAY_AGAIN".localized()) {
+                                [unowned self] in
+                                self.delegate?.resetPanel(self)
+            }
+        }
     }
     
-    private func presentTimeFinishedAlert() {
-        presentAlert(title: "TIME_FINISHED".localized(),
-                     message: "TIME_FINISHED_MESSAGE".localized(),
-                     action: "TRY_AGAIN".localized()) { }
+    private func presentTimeFinishedAlert(total: Int, hitted: Int) {
+        
+        var message = "TIME_FINISHED_MESSAGE".localized()
+        message = String(format: message, total, hitted)
+        DispatchQueue.main.async {
+            self.presentAlert(title: "TIME_FINISHED".localized(),
+                              message: message,
+                              action: "TRY_AGAIN".localized()) {
+                                [unowned self] in
+                                self.delegate?.resetPanel(self)
+            }
+        }
+        
+    }
+    
+    private func presentRequestError(_ error: Error) {
+        DispatchQueue.main.async {
+            self.presentAlert(title: "ERROR".localized(),
+                              message: error.localizedDescription,
+                              action: "OK".localized())
+        }
     }
     
 }
